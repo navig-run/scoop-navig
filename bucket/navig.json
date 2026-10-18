@@ -1,5 +1,5 @@
 {
-  "version": "3.27.2",
+  "version": "3.27.3",
   "description": "Terminal-first agent OS: multi-host SSH, encrypted vault, MCP server, AI operator.",
   "homepage": "https://navig.run",
   "license": "Apache-2.0",
@@ -8,8 +8,8 @@
     "The desktop apps (NAVIG Anchor / NAVIG OS) are separate: they use their own runtime under %USERPROFILE%\\.navig."
   ],
   "depends": "python",
-  "url": "https://files.pythonhosted.org/packages/0c/08/6a88eff646ce304999778bc245cbfe28ddbbbf45b04ac1d91a67cf8b324a/navig-3.27.2-py3-none-any.whl",
-  "hash": "24413317c01fc747b0a45bc468cae33bf673e9b0e2af35c44aa4b900fc667a96",
+  "url": "https://files.pythonhosted.org/packages/55/67/2ad0d8a1712545c486007d003bbae8cace65f6cbb7484cb9961c44b10fbf/navig-3.27.3-py3-none-any.whl",
+  "hash": "440e0223d96c1ff2ce4413e0cf765a3f4f5dfaf8f2447ff5b3d71c8de94a831f",
   "installer": {
     "script": [
       "python -m venv \"$dir\\venv\"",
@@ -23,7 +23,7 @@
     ]
   ],
   "checkver": {
-    "jsonpath": "$.info.version",
-    "url": "https://pypi.org/pypi/navig/json"
+    "url": "https://pypi.org/pypi/navig/json",
+    "jsonpath": "$.info.version"
   }
 }
