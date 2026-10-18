@@ -1,0 +1,29 @@
+{
+    "version": "3.27.1",
+    "description": "Terminal-first agent OS: multi-host SSH, encrypted vault, MCP server, AI operator.",
+    "homepage": "https://navig.run",
+    "license": "Apache-2.0",
+    "notes": [
+        "The CLI lives inside this Scoop app directory, so `scoop uninstall navig` removes it completely.",
+        "The desktop apps (NAVIG Anchor / NAVIG OS) are separate: they use their own runtime under %USERPROFILE%\\.navig."
+    ],
+    "depends": "python",
+    "url": "https://files.pythonhosted.org/packages/86/0f/7d28d5ab0665ff2f6aa3d0cfe211bff8438e1f13a9ce1146f18d3933343c/navig-3.27.1-py3-none-any.whl",
+    "hash": "b98cd6e6afaea292d83f4b1991bc59ed67cbda9d6aafdc30132c08d71a1c4a1a",
+    "installer": {
+        "script": [
+            "python -m venv \"$dir\\venv\"",
+            "& \"$dir\\venv\\Scripts\\python.exe\" -m pip install --disable-pip-version-check --no-warn-script-location \"$dir\\navig-$version-py3-none-any.whl\""
+        ]
+    },
+    "bin": [
+        [
+            "venv\\Scripts\\navig.exe",
+            "navig"
+        ]
+    ],
+    "checkver": {
+        "url": "https://pypi.org/pypi/navig/json",
+        "jsonpath": "$.info.version"
+    }
+}
